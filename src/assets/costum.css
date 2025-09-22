@@ -1,0 +1,27 @@
+/* style ta3i */
+/* herobanner page 1 */
+/* hadi ta3 lvideo lazm thbat */
+
+.cs_clients_info {
+    margin-top: 100px;
+}
+
+/* title */
+.cs_hero.cs_style_1 .cs_hero_title{
+    font-size: 100px;
+}
+
+.cs_hero_content{
+    background-color: rgb(7, 228, 228);
+}
+/* page home */
+/* لو فيه طبقة before ملوّنة على الـ hero، عطّلها */
+.cs_hero.cs_style_2.cs_bg_filled::before {
+    background: aqua !important;
+}
+
+/* لو الكلاس cs_bg_filled عندو لون قوي، خليه شفاف */
+.cs_hero.cs_style_2.cs_bg_filled {
+    background: aqua !important;
+}
+
