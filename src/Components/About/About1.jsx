@@ -56,7 +56,7 @@ const About1 = () => {
           <div className="col-lg-6">
             <div className="cs_about_thumbnail_wrapper wow fadeInUp">
               <div className="cs_about_thumbnail position-relative">
-                <img src="/assets/img/imgabouthome/about_img_1.jpg" alt="Abou image" />
+                <img src="/assets/img/about_img_1.jpg" alt="Abou image" />
                 <div className="cs_project_infobox_wrapper">
                   <div className="cs_project_infobox cs_blue_bg">
                     <h3 className="cs_fs_48 cs_white_color">5K+</h3>
@@ -68,7 +68,7 @@ const About1 = () => {
                 </div>
               </div>
               <div className="cs_about_thumbnail position-relative">
-                <img src="/assets/img/imgabouthome/about_img_2.jpg" alt="About image" />
+                <img src="/assets/img/about_img_2.jpg" alt="About image" />
                 <div className="cs_about_shape_3 position-absolute">
                   <img src="/assets/img/about_shape_1.svg" alt="Circle shape" />
                 </div>
