@@ -1,8 +1,12 @@
 {
- "name": "excellencias",
+  "name": "excellencias",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
+  "engines": {
+    "node": ">=18.18.0",
+    "npm": ">=9"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
