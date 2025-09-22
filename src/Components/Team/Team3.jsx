@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 const Team3 = () => {
 
     const teamContent = [
-        {img:'/assets/img/team_5.jpg', name:'Esther howard', content:'Mid-Level Developer',instagram:'#',facebook:'#',twitter:'#',linkedin:'#'},
-        {img:'/assets/img/team_6.jpg', name:'Leslie Alexander', content:'Founder & CEO',instagram:'#',facebook:'#',twitter:'#',linkedin:'#'},
-        {img:'/assets/img/team_7.jpg', name:'Theresa Web', content:'Merchandiser',instagram:'#',facebook:'#',twitter:'#',linkedin:'#'},
-        {img:'/assets/img/team_9.jpg', name:'Esther howard', content:'Merchandiser',instagram:'#',facebook:'#',twitter:'#',linkedin:'#'},
+        {img:'/assets/img/team_5.jpg', name:'Dr.salah', content:'Mid-Level Developer',instagram:'#',facebook:'#',twitter:'#',linkedin:'#'},
+        {img:'/assets/img/team_6.jpg', name:'doha', content:'Founder & CEO',instagram:'#',facebook:'#',twitter:'#',linkedin:'#'},
+        {img:'/assets/img/team_7.jpg', name:'Noufel', content:'Merchandiser',instagram:'#',facebook:'#',twitter:'#',linkedin:'#'},
+        {img:'/assets/img/team_9.jpg', name:'anfal', content:'Merchandiser',instagram:'#',facebook:'#',twitter:'#',linkedin:'#'},
         {img:'/assets/img/team_10.jpg', name:'Theresa Web', content:'Merchandiser',instagram:'#',facebook:'#',twitter:'#',linkedin:'#'},
         {img:'/assets/img/team_11.jpg', name:'Leslie Alexander', content:'Merchandiser',instagram:'#',facebook:'#',twitter:'#',linkedin:'#'},
       ];
