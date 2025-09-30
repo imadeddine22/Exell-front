@@ -14,7 +14,7 @@ const Footer2 = () => {
           <div className="cs_footer_top">
             <div className="cs_footer_top_content_list">
               <div className="cs_brand wow zoomIn">
-                <img src="/assets/img/footer_logo.svg" alt="Logo" />
+                <img  className="logo-header" src="/assets/img/logo.png" alt="Logo" />
               </div>
               <div className="cs_iconbox_wrapper">
                 <div className="cs_iconbox cs_style_4">

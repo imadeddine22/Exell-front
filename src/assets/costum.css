@@ -1,28 +1,184 @@
-/* style ta3i */
-/* herobanner page 1 */
-/* hadi ta3 lvideo lazm thbat */
+/* Custom styles */
+/* Hero banner page 1 */
+/* Video section adjustment */
 
 .cs_clients_info {
     margin-top: 100px;
 }
 
-/* title */
-.cs_hero.cs_style_1 .cs_hero_title{
+/* Title */
+.cs_hero.cs_style_1 .cs_hero_title {
     font-size: 100px;
 }
 
-.cs_hero_content{
-    background-color: rgb(7, 228, 228);
-}
-/* page home */
-/* لو فيه طبقة before ملوّنة على الـ hero، عطّلها */
-.cs_hero.cs_style_2.cs_bg_filled::before {
-    background: aqua !important;
+.cs_hero {
+    background-color: #55b4b6;
 }
 
-/* لو الكلاس cs_bg_filled عندو لون قوي، خليه شفاف */
-.cs_hero.cs_style_2.cs_bg_filled {
-    background: aqua !important;
+/* ====== Section générale ====== */
+.hero2 {
+    background: #55b4b6;
+    position: relative;
+    overflow: hidden;
 }
 
+/* ====== Container ====== */
+.hero2__container {
+    max-width: 1280px;
+    /* زيدت العرض الأقصى شوية */
+    margin-inline: auto;
+    padding: clamp(16px, 3vw, 40px) clamp(16px, 4vw, 48px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* عمودين */
+    align-items: center;
+    gap: clamp(16px, 3vw, 48px);
+    min-height: min(88vh, 860px);
+    direction: ltr;
+}
 
+/* ====== Texte (gauche) ====== */
+.hero2__content {
+    display: grid;
+    gap: clamp(12px, 2.2vw, 20px);
+    order: 1;
+    /* النصوص في اليسار */
+    text-align: left;
+}
+
+.hero2__title {
+    margin: 0;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+    font-size: clamp(28px, 6vw, 56px);
+}
+
+.small-title-home {
+    color: white;
+}
+
+.hero2__subtitle {
+    margin: 0;
+    color: #ffffff;
+    line-height: 1.7;
+    font-size: clamp(14px, 1.8vw, 18px);
+}
+
+.hero2__actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
+
+.hero2__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    padding: 12px 18px;
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: none;
+    transition: transform .15s ease, box-shadow .15s ease, background-color .15s ease, color .15s ease;
+    border: 1px solid transparent;
+}
+
+.hero2__btn--primary {
+    background: #1004ee;
+    color: #fff;
+    box-shadow: 0 10px 24px rgba(30, 9, 215, 0.22);
+}
+
+.hero2__btn--primary:hover {
+    transform: translateY(-2px);
+}
+
+.hero2__btn--ghost {
+    background: transparent;
+    color: #ffffff;
+    border-color: #cbd5e1;
+}
+
+.hero2__btn--ghost:hover {
+    background: #f1f5f9;
+}
+
+/* ====== Image (droite) ====== */
+.hero2__imageWrap {
+    position: relative;
+    display: grid;
+    place-items: center;
+    order: 2;
+    /* الصورة في اليمين */
+}
+
+/* كبّرت الصورة مع كل الشاشات الكبيرة */
+.hero2__image {
+    width: clamp(360px, 48vw, 720px);
+    /* كانت 520px — الآن أكبر ومرنة */
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 20px 60px rgba(2, 6, 23, .12));
+    translate: 0 0;
+    padding-top: 70px;
+}
+
+/* ====== Fond déco ====== */
+.hero2__bg {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(1200px 600px at 85% 90%, rgba(99, 102, 241, .08), transparent 60%),
+        radial-gradient(800px 400px at 10% 10%, rgba(34, 197, 94, .06), transparent 60%);
+    pointer-events: none;
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 992px) {
+    .hero2__container {
+        grid-template-columns: 1fr;
+        min-height: unset;
+    }
+
+    .hero2__content {
+        order: 2;
+        text-align: center;
+    }
+
+    .hero2__actions {
+        justify-content: center;
+    }
+
+    .hero2__imageWrap {
+        order: 1;
+    }
+
+    .hero2__image {
+        width: min(520px, 92%);
+    }
+
+    /* تبقى كبيرة نسبياً على التابليت */
+}
+@media (max-width: 576px) {
+    .hero2__container {
+        padding: 20px 16px;
+    }
+
+                                                                                                                                .hero2__title {
+                                                                                                                                    font-size: clamp(24px, 7vw, 34px);
+                                                                                                                                }
+
+                                                                                                                                .hero2__subtitle {
+                                                                                                                                    font-size: 14px;
+                                                                                                                                }
+
+                                                                                                                                .hero2__image {
+                                                                                                                                    width: 100%;
+                                                                                                                                }
+
+                                                                                                                                /* تملى العرض على الموبايل */
+                                                                                                                                }

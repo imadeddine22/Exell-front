@@ -8,7 +8,6 @@ import ServiceDetailsPage from "../Pages/ServiceDetailsPage";
 import ProjectPage from "../Pages/ProjectPage";
 import ProjectDetailsPage from "../Pages/ProjectDetailsPage";
 import TeamPage from "../Pages/TeamPage";
-import TeamDetailsPage from "../Pages/TeamDetailsPage";
 import ContactPage from "../Pages/ContactPage";
 import FaqPage from "../Pages/FaqPage";
 import BlogPage from "../Pages/BlogPage";
@@ -32,7 +31,7 @@ export const router = createBrowserRouter([
         element: <ServicePage></ServicePage>,
       },
       {
-        path: "/service/service-details",
+        path: "/service/:slug",
         element: <ServiceDetailsPage></ServiceDetailsPage>,
       },
       {
@@ -40,16 +39,13 @@ export const router = createBrowserRouter([
         element: <ProjectPage></ProjectPage>,
       },
       {
-        path: "/project/project-details",
-        element: <ProjectDetailsPage></ProjectDetailsPage>,
+        path: "/project/:id",
+        element: <ProjectDetailsPage />,
       },
+
       {
         path: "/team",
         element: <TeamPage></TeamPage>,
-      },
-      {
-        path: "/team/team-details",
-        element: <TeamDetailsPage></TeamDetailsPage>,
       },
       {
         path: "/faq",

@@ -24,7 +24,7 @@ const Footer1 = () => {
           <div className="cs_footer_content cs_footer_row">
             <div className="cs_footer_widget cs_footer_text">
               <div className="cs_text_widget">
-                <img src="/assets/img/footer_logo.svg" alt="Logo" className="cs_mb_30 wow zoomIn" />
+                <img src="/assets/img/logo.png" alt="Logo" className="cs_mb_30 wow zoomIn" />
                 <p className="cs_mb_37">Nous développons des stratégies de communication innovantes pour renforcer l’impact des marques de santé. </p>
               </div>
               <div className="cs_social_btns cs_style_1">

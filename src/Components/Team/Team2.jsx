@@ -5,8 +5,8 @@ import loadBackgroudImages from '../Common/loadBackgroudImages';
 const Team2 = () => {
 
     const teamContent = [
-        {img:'/assets/img/team_5.jpg', name:'Dr. Khaled Salah Eddine', content:'Directeur Général',instagram:'#',facebook:'#',twitter:'#',linkedin:'#'},
-        {img:'/assets/img/team_6.jpg', name:'Doha Djebbari', content:'Co-fondatrice & Directrice Communication',instagram:'#',facebook:'#',twitter:'#',linkedin:'#'},
+        {img:'/assets/img/team_5.jpg', name:'Dr. KHALED Salah Eddine', content:'Directeur Général',instagram:'#',facebook:'#',twitter:'#',linkedin:'#'},
+        {img:'/assets/img/team_6.jpg', name:'DJEBBARI Doha ', content:'Co-fondatrice & Directrice Communication',instagram:'#',facebook:'#',twitter:'#',linkedin:'#'},
         {img:'/assets/img/team_7.jpg', name:'Yasmine B.', content:'Responsable Marketing Digital',instagram:'#',facebook:'#',twitter:'#',linkedin:'#'},
       ];
 

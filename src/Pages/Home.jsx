@@ -4,7 +4,6 @@ import About1 from '../Components/About/About1';
 import Counter1 from '../Components/Counter/Counter1';
 import HowWeDo from '../Components/HowWeDo/HowWeDo';
 import Marquee from '../Components/Marquee/Marquee';
-import Process1 from '../Components/Process/Process1';
 import Video1 from '../Components/Video/Video1';
 import Services1 from '../Components/Services/Services1';
 import Project1 from '../Components/Project/Project1';
@@ -24,7 +23,6 @@ const Home = () => {
             <Project1></Project1>
             <Marquee></Marquee>
             <HowWeDo></HowWeDo>
-            <Process1></Process1>
             <Video1></Video1>
             <Brand1></Brand1>
             <Testimonial1></Testimonial1>

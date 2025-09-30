@@ -1,52 +1,176 @@
-import React from 'react';
+import React from "react";
+import { useParams, Link } from "react-router-dom";
 
-const ServiceDetails = () => {
+// ✅ بيانات موحدة للخدمات (Services1 و Services4 يستعملو نفس السورس)
+const servicesData = {
+  "brand-strategy": {
+    title: "Brand Strategy",
+    img: "/assets/img/service_details.jpg",
+    description:
+      "Création ou repositionnement d’image de marque : storytelling, identité, messages clés. Nous vous accompagnons dans la définition d’une identité forte et cohérente avec vos valeurs et votre marché.",
+    features: [
+      "Analyse du marché et concurrence",
+      "Définition du positionnement",
+      "Storytelling & identité visuelle",
+      "Charte graphique et guidelines",
+    ],
+  },
+  "activations-pharmacie": {
+    title: "Activations en pharmacie",
+    img: "/assets/img/service_details_2.jpg",
+    description:
+      "Animations terrain à grande échelle, distribution ciblée, PLV et kits de gamification. Nous aidons les marques à mieux interagir avec les consommateurs directement sur le terrain.",
+    features: [
+      "Organisation d’animations en pharmacie",
+      "Distribution de PLV et goodies",
+      "Kits de gamification",
+      "Campagnes promotionnelles ciblées",
+    ],
+  },
+  "marketing-influence": {
+    title: "Marketing d’influence",
+    img: "/assets/img/service_details.jpg",
+    description:
+      "Collaboration avec médecins, pharmaciens, coachs, créateurs TikTok et Instagram. Nous créons des partenariats authentiques pour valoriser vos produits.",
+    features: [
+      "Identification et sélection d’influenceurs",
+      "Collaboration avec experts santé et lifestyle",
+      "Campagnes TikTok & Instagram",
+      "Création de contenu sponsorisé",
+    ],
+  },
+  "publicite-media-buying": {
+    title: "Publicité & Media Buying",
+    img: "/assets/img/service_details_2.jpg",
+    description:
+      "Facebook Ads, Google Ads, gestion des budgets et optimisation ROI. Nous planifions et exécutons vos campagnes publicitaires pour maximiser vos résultats.",
+    features: [
+      "Campagnes Facebook Ads et Google Ads",
+      "Optimisation du retour sur investissement",
+      "Gestion et suivi des budgets",
+      "Rapports et analytics détaillés",
+    ],
+  },
+  "evenementiel-salons": {
+    title: "Evénementiel & salons",
+    img: "/assets/img/service_details.jpg",
+    description:
+      "Conception de stands, organisation logistique, animation live, couverture média.",
+    features: [
+      "Conception et design de stands",
+      "Organisation logistique complète",
+      "Animations live interactives",
+      "Couverture média et relations presse",
+    ],
+  },
+  "production-video-studio": {
+    title: "Production Vidéo & Studio",
+    img: "/assets/img/service_details_2.jpg",
+    description:
+      "Nous produisons des vidéos impactantes et sur mesure dans notre studio professionnel aménagé.",
+    features: [
+      "Vidéos publicitaires",
+      "Captation et montage studio",
+      "Motion design créatif",
+      "Supports vidéos adaptés au digital",
+    ],
+  },
+  "campagnes-digitales": {
+    title: "Campagnes digitales",
+    img: "/assets/img/service_details.jpg",
+    description:
+      "Stratégies social media, création de contenu, community management, motion design, TikTok et YouTube Ads. Nous optimisons vos campagnes pour un engagement maximal.",
+    features: [
+      "Gestion des réseaux sociaux",
+      "Création de contenu engageant",
+      "Publicité ciblée (Facebook, Instagram, TikTok, YouTube)",
+      "Community management",
+    ],
+  },
+  "3d-modeling": {
+    title: "3D Modeling",
+    img: "/assets/img/service_details.jpg",
+    description:
+      "Modélisation 3D sur mesure pour vos projets créatifs et publicitaires.",
+    features: [
+      "Modélisation 3D réaliste",
+      "Rendus pour publicité et communication",
+      "Intégration 3D dans vidéos",
+      "Conception pour réalité augmentée/virtuelle",
+    ],
+  },
+};
+
+const ServiceDetailsPage = () => {
+  const { slug } = useParams();
+  const service = servicesData[slug];
+
+  // 🚨 إذا الخدمة غير موجودة
+  if (!service) {
+    return (
+      <div className="container text-center py-5">
+        <h2>Service introuvable</h2>
+        <p>Le service que vous recherchez n’existe pas.</p>
+        <Link to="/service" className="cs_btn cs_radius_10 mt-3">
+          Retour aux services
+        </Link>
+      </div>
+    );
+  }
+
   return (
     <div>
+      {/* Espace top */}
       <div className="cs_height_120 cs_height_lg_80"></div>
+
       <div className="container">
+        {/* Breadcrumb */}
+        <nav className="breadcrumb mb-4">
+          <Link to="/service" className="breadcrumb-link">
+            Services
+          </Link>{" "}
+          / <span>{service.title}</span>
+        </nav>
+
         <div className="row cs_row_gap_30 cs_gap_y_40">
-          <div className="col-lg-4">
-            <aside className="cs_sidebar cs_style_1">
-              <div className="cs_sidebar_widget cs_gray_bg_1 cs_radius_20 wow fadeInDown">
-                <h2 className="cs_sidebar_widget_title cs_fs_24 cs_semibold cs_mb_21">Catégories</h2>
-                <ul className="cs_service_category_list cs_mp_0">
-                  <li>
-                    <a href="#">
-                      <span>Branding & Identité visuelle</span>
-                      <span><i className="bi bi-arrow-right"></i></span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" aria-label="Click to visit service details">
-                      <span>Marketing digital & Social Media</span>
-                      <span><i className="bi bi-arrow-right"></i></span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" aria-label="Click to visit service details">
-                      <span>SEO & Analytics</span>
-                      <span><i className="bi bi-arrow-right"></i></span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" aria-label="Click to visit service details">
-                      <span>Production audiovisuelle</span>
-                      <span><i className="bi bi-arrow-right"></i></span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" aria-label="Click to visit service details">
-                      <span>Événementiel & Activations terrain</span>
-                      <span><i className="bi bi-arrow-right"></i></span>
-                    </a>
-                  </li>
+          {/* Main content */}
+          <div className="col-lg-8">
+            <div className="cs_service_details">
+              <img
+                src={service.img}
+                alt={`Illustration pour ${service.title}`}
+                loading="lazy"
+                className="w-100 cs_radius_20"
+              />
+              <h2 className="mt-4">{service.title}</h2>
+              <p>{service.description}</p>
+
+              {/* Features */}
+              <div className="cs_service_details_features cs_gray_bg_1 cs_radius_20 mt-4 p-4">
+                <ul className="cs_list cs_style_1 cs_type_1 cs_mp_0">
+                  {service.features.map((f, i) => (
+                    <li key={i}>
+                      <span className="cs_list_icon cs_center">
+                        <i className="bi bi-check-circle"></i>
+                      </span>
+                      <span className="cs_list_text">{f}</span>
+                    </li>
+                  ))}
                 </ul>
               </div>
+            </div>
+          </div>
 
-              <div className="cs_sidebar_widget cs_blue_bg cs_white_color cs_radius_20 wow fadeInDown">
-                <h2 className="cs_sidebar_widget_title cs_fs_24 cs_semibold cs_white_color cs_mb_5">Besoin d’aide ?</h2>
-                <p className="cs_medium cs_mb_26">Contactez-nous 24/7 – équipe Excellencias à votre écoute.</p>
+          {/* Sidebar */}
+          <div className="col-lg-4">
+            <aside className="cs_sidebar cs_style_1">
+              <div className="cs_sidebar_widget cs_blue_bg cs_white_color cs_radius_20 wow fadeInDown p-4">
+                <h2 className="cs_sidebar_widget_title cs_fs_24 cs_semibold cs_white_color cs_mb_5">
+                  Besoin d’aide ?
+                </h2>
+                <p className="cs_medium cs_mb_26">
+                  Contactez-nous 24/7 – équipe Excellencias à votre écoute.
+                </p>
                 <ul className="cs_location_list cs_mp_0">
                   <li>
                     <div className="cs_iconbox cs_style_5">
@@ -55,7 +179,13 @@ const ServiceDetails = () => {
                       </span>
                       <div className="cs_iconbox_info">
                         <p className="cs_fs_14 cs_semibold mb-0">Appelez-nous</p>
-                        <a href="tel:+213560000000" aria-label="Click to make a call" className="cs_fs_18 cs_semibold">+213 560 00 00 00</a>
+                        <a
+                          href="tel:+213560000000"
+                          aria-label="Click to make a call"
+                          className="cs_fs_18 cs_semibold"
+                        >
+                          +213 560 00 00 00
+                        </a>
                       </div>
                     </div>
                   </li>
@@ -66,7 +196,13 @@ const ServiceDetails = () => {
                       </span>
                       <div className="cs_iconbox_info">
                         <p className="cs_fs_14 cs_semibold mb-0">E-mail</p>
-                        <a href="mailto:contact@excellencias.co" aria-label="Send mail link" className="cs_fs_18 cs_semibold">contact@excellencias.co</a>
+                        <a
+                          href="mailto:contact@excellencias.co"
+                          aria-label="Send mail link"
+                          className="cs_fs_18 cs_semibold"
+                        >
+                          contact@excellencias.co
+                        </a>
                       </div>
                     </div>
                   </li>
@@ -76,8 +212,12 @@ const ServiceDetails = () => {
                         <i className="bi bi-geo-alt-fill"></i>
                       </span>
                       <div className="cs_iconbox_info">
-                        <p className="cs_fs_14 cs_semibold mb-0">Adresse du bureau</p>
-                        <p className="cs_fs_18 cs_semibold mb-0">Dar El Beïda, Alger – Algérie</p>
+                        <p className="cs_fs_14 cs_semibold mb-0">
+                          Adresse du bureau
+                        </p>
+                        <p className="cs_fs_18 cs_semibold mb-0">
+                          Dar El Beïda, Alger – Algérie
+                        </p>
                       </div>
                     </div>
                   </li>
@@ -85,99 +225,13 @@ const ServiceDetails = () => {
               </div>
             </aside>
           </div>
-
-          <div className="col-lg-8">
-            <div className="cs_service_details">
-              <img src="/assets/img/service_details.jpg" alt="Bannière service" loading="lazy" />
-              <h2>Gestion de Contenu (CMS)</h2>
-              <p>
-                Notre service <strong>CMS</strong> permet de créer, gérer et mettre à jour vos pages (textes, images, vidéos, documents)
-                sans compétences techniques. Excellencias Corporate met en place des interfaces simples, des modèles
-                cohérents avec votre charte, et des workflows de validation pour publier vite et proprement, sur des sites
-                vitrines, e-commerce ou médias (santé, cosmétique, éducation, corporate).
-              </p>
-
-              <div className="cs_service_details_features cs_gray_bg_1 cs_radius_20">
-                <div className="row cs_row_gap_30 cs_gap_y_30">
-                  <div className="col-md-5 wow fadeInLeft">
-                    <img src="/assets/img/service_details_2.jpg" alt="Illustration fonctionnalité" loading="lazy" />
-                  </div>
-                  <div className="col-md-7">
-                    <div className="cs_feature_info">
-                      <h3>Composants clés d’un CMS :</h3>
-                      <p>Outils fiables et évolutifs pour une gestion éditoriale rapide, sécurisée et mesurable.</p>
-                      <ul className="cs_list cs_style_1 cs_type_1 cs_mp_0">
-                        <li>
-                          <span className="cs_list_icon cs_center"><i className="bi bi-check-circle"></i></span>
-                          <span className="cs_list_text">Interface éditeur (UI) intuitive</span>
-                        </li>
-                        <li>
-                          <span className="cs_list_icon cs_center"><i className="bi bi-check-circle"></i></span>
-                          <span className="cs_list_text">Plugins & extensions (SEO, formulaires, multilingue)</span>
-                        </li>
-                        <li>
-                          <span className="cs_list_icon cs_center"><i className="bi bi-check-circle"></i></span>
-                          <span className="cs_list_text">Thèmes & templates brandés Excellencias</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <p>
-                Nous configurons et personnalisons votre CMS (arborescence, rôles, SEO, sécurité), puis formons vos équipes
-                pour une autonomie totale. Suivi analytics et maintenance sont inclus pour garantir performance et continuité.
-              </p>
-
-              <div className="cs_steps_to_get_service">
-                <h2>4 étapes simples de mise en œuvre</h2>
-                <p>Un process clair qui va de l’analyse au déploiement, avec des livrables vérifiés à chaque étape.</p>
-
-                <div className="cs_process_steps_wrapper">
-                  <div className="cs_process_step cs_white_bg cs_radius_10 wow fadeInLeft">
-                    <span className="cs_step_index cs_center cs_blue_bg cs_fs_18 cs_bold cs_white_color cs_radius_50">01</span>
-                    <div className="cs_step_info">
-                      <h3>Cadrage & audit</h3>
-                      <p>Objectifs, arborescence, contenus, conformité, SEO, sécurité.</p>
-                    </div>
-                  </div>
-
-                  <div className="cs_process_step cs_white_bg cs_radius_10 wow fadeInRight">
-                    <span className="cs_step_index cs_center cs_blue_bg cs_fs_18 cs_bold cs_white_color cs_radius_50">02</span>
-                    <div className="cs_step_info">
-                      <h3>Design & templates</h3>
-                      <p>Création des maquettes et intégration aux standards de votre marque.</p>
-                    </div>
-                  </div>
-
-                  <div className="cs_process_step cs_white_bg cs_radius_10 wow fadeInLeft">
-                    <span className="cs_step_index cs_center cs_blue_bg cs_fs_18 cs_bold cs_white_color cs_radius_50">03</span>
-                    <div className="cs_step_info">
-                      <h3>Intégration & SEO</h3>
-                      <p>Mise en place du CMS, contenus, plugins, optimisation des performances.</p>
-                    </div>
-                  </div>
-
-                  <div className="cs_process_step cs_white_bg cs_radius_10 wow fadeInRight">
-                    <span className="cs_step_index cs_center cs_blue_bg cs_fs_18 cs_bold cs_white_color cs_radius_50">04</span>
-                    <div className="cs_step_info">
-                      <h3>Recette & formation</h3>
-                      <p>Tests, corrections, formation des équipes et lancement officiel.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
         </div>
       </div>
 
+      {/* Espace bottom */}
       <div className="cs_height_120 cs_height_lg_80"></div>
     </div>
   );
 };
 
-export default ServiceDetails;
+export default ServiceDetailsPage;

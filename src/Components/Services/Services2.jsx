@@ -6,13 +6,13 @@ const Services2 = () => {
     const chooseContent = [
         {
           img:'/assets/img/icons/bulb.svg',
-          title:'Branding & Design',
-          content:'Création d’identités visuelles uniques et impactantes pour vos marques.'
+          title:'Brand Strategy',
+          content:'Création ou repositionnement d’image de marque : storytelling,identité, messages clés.'
         },
         {
           img:'/assets/img/icons/email.svg',
-          title:'Email Marketing',
-          content:'Campagnes ciblées et personnalisées pour renforcer la relation client.'
+          title:'Activations en pharmacie',
+          content:'Animations terrain à grande échelle, distribution ciblée, PLV,kits gamification..'
         },
         {
           img:'/assets/img/icons/seo.svg',

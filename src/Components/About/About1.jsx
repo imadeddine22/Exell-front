@@ -13,24 +13,27 @@ const About1 = () => {
                 <p className="cs_section_subtitle cs_fs-18 cs_semibold cs_accent_color cs_mb_20">
                   About Us<span className="cs_shape_right"></span>
                 </p>
-                <h2 className="cs_fs_48 cs_mb_21 wow fadeInDown">L’excellence du digital</h2>
+                <h2 className="cs_fs_48 cs_mb_21 wow fadeInDown">Qui sommes-nous ?</h2>
                 <p className="cs_section_heading_text mb-0">
- Nous aidons les marques e-commerce à acquérir de nouveaux clients et à renforcer leur fidélisation en les accompagnant tout au long de leur parcours digital.  </p>
+  Nous accompagnons les marques dans leur croissance digitale en combinant créativité, innovation et expertise. Notre mission est de transformer vos idées en expériences uniques qui renforcent la visibilité et la fidélité de vos clients.  </p>
               </div>
               <ul className="cs_list cs_style_1 cs_medium cs_heading_color cs_mp_0">
                 <li>
                   <span className="cs_list_icon cs_center"><i className="bi bi-check-lg"></i></span>
-                  <span className="cs_list_text">Différentes options d’analyse.</span>
+                  <span className="cs_list_text">Solutions digitales adaptées à vos besoins.</span>
                 </li>
                 <li>
                   <span className="cs_list_icon cs_center"><i className="bi bi-check-lg"></i></span>
-                  <span className="cs_list_text">Analyse du temps de chargement, du poids des pages et du nombre de requêtes</span>
+                  <span className="cs_list_text">Stratégies créatives pour optimiser votre présence en ligne.</span>
                 </li>
                 <li>
                   <span className="cs_list_icon cs_center"><i className="bi bi-check-lg"></i></span>
-                  <span className="cs_list_text">Opérations avancées d’analyse de données</span>
+                  <span className="cs_list_text">Expertise pour améliorer l’engagement et la fidélisation.</span>
                 </li>
-              </ul>
+                </ul>
+                
+          
+
               <div className="cs_about_btn_group">
                 <Link to="/about" aria-label="Click to visit about us page" className="cs_btn cs_style_1 cs_fs_14 cs_bold text-uppercase wow fadeInLeft"><span>About Us</span></Link>
                 <div className="cs_client_info_wrapper wow fadeInRight">

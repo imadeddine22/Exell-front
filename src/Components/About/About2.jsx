@@ -22,20 +22,26 @@ const About2 = () => {
                     Excellencias Corporate : communication santé & solutions 360°
                   </h2>
                   <p className="cs_section_heading_text mb-0 wow fadeInUp" data-wow-delay="200ms">
-                    Nous accompagnons laboratoires, cliniques et entreprises avec des campagnes de communication intégrées : branding, marketing digital, production audiovisuelle et animation en officine.
+                    Excellencias Corporate, c’est plus qu’une agence de communication.
+On est un partenaire stratégique pour le secteur santé et bien-être, où on
+combine créativité, stratégie et rigueur scientifique pour donner plus de
+visibilité, plus de force et plus d’impact aux marques.
                   </p>
                 </div>
                 <div className="cs_features_wrapper">
                   <div className="cs_feature_item">
-                    <h3 className="cs_fs_24 cs_mb_4">Notre Mission</h3>
+                    <h3 className="cs_fs_24 cs_mb_4">Histoire
+</h3>
                     <p className="cs_fs_18 mb-0">
-                      Donner de la valeur aux marques de santé grâce à des campagnes créatives et une vision stratégique.
+                     Créée en 2018, Excellencias Corporate est une agence de marketing
+et de communication spécialisée dans la santé, le bien-être
+et le secteur pharmaceutique.
                     </p>
                   </div>
                   <div className="cs_feature_item">
-                    <h3 className="cs_fs_24 cs_mb_4">Notre Vision</h3>
+                    <h3 className="cs_fs_24 cs_mb_4">Notre equipe</h3>
                     <p className="cs_fs_18 mb-0">
-                      Être la référence en Algérie dans le marketing pharmaceutique et l’innovation en communication santé.
+                      Une équipe pluridisciplinaire, jeune et passionnée, réunissant experts en santé, créatifs et stratèges digitaux pour offrir des solutions innovantes et adaptées aux besoins des marques.
                     </p>
                   </div>
                 </div>
@@ -49,7 +55,7 @@ const About2 = () => {
                     </div>
                     <div className="cs_client_review_content">
                       <div className="cs_client_thumb">
-                        <img src="/assets/img/upwork.svg" alt="Upwork logo" />
+                     
                       </div>
                       <div className="cs_rating" data-rating="4.5">
                         <div className="cs_rating_percentage"></div>

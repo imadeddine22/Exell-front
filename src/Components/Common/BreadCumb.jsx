@@ -24,4 +24,5 @@ const BreadCumb = ({Title,bgimg}) => {
     );
 };
 
+
 export default BreadCumb;

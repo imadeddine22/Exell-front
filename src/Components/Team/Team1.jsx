@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 const Team1 = () => {
 
     const teamContent = [
-        {img:'/assets/img/team_1.jpg', name:'Dr. Khaled Salah Eddine', content:'Fondateur & Directeur Général',instagram:'#',facebook:'#',twitter:'#',linkedin:'#'},
-        {img:'/assets/img/team_2.jpg', name:'Doha Djebbari', content:'Vice-Directrice & Project Manager',instagram:'#',facebook:'#',twitter:'#',linkedin:'#'},
-        {img:'/assets/img/team_3.jpg', name:'Theresa Web', content:'Merchandiser',instagram:'#',facebook:'#',twitter:'#',linkedin:'#'},
-        {img:'/assets/img/team_4.jpg', name:'Floyd Miles', content:'Senior Developer',instagram:'#',facebook:'#',twitter:'#',linkedin:'#'},
+        {img:'/assets/img/team_1.jpg', name:'Dr. KHALED Salah Eddine', content:'Fondateur & Directeur Général',instagram:'#',facebook:'#',twitter:'#',linkedin:'#'},
+        {img:'/assets/img/team_2.jpg', name:'DJEBBARI Doha ', content:'Vice-Directrice & Project Manager',instagram:'#',facebook:'#',twitter:'#',linkedin:'#'},
+        {img:'/assets/img/team_3.jpg', name:'MOALLEM Naoufel', content:'Graphic Designer',instagram:'#',facebook:'#',twitter:'#',linkedin:'#'},
+        {img:'/assets/img/team_4.jpg', name:'BEGHDAD Anfal ', content:'Chargée de RH/Finance',instagram:'#',facebook:'#',twitter:'#',linkedin:'#'},
       ];
 
     return (

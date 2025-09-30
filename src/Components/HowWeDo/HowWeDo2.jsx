@@ -38,7 +38,7 @@ const HowWeDo2 = () => {
                     </div>
                     <div className="cs_client_review_content">
                       <div className="cs_client_thumb">
-                        <img src="/assets/img/upwork.svg" alt="Upwork logo" />
+                        
                       </div>
                       <div className="cs_rating" data-rating="4.5">
                         <div className="cs_rating_percentage"></div>
